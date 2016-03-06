@@ -1,16 +1,16 @@
 Static::Application.routes.draw do
 
-  get "users/new"
-
   root :to => "pages#index"
 
-  get "pages/index"
+  # get 'users/new'
 
-  get "pages/contact"
+  match '/new', :to => 'users#new'
 
-  get "pages/propos"
+  get '/contact', :to => 'pages#contact'
 
-  get "pages/help"
+  get "/propos", :to => 'pages#propos'
+
+  get "/help", :to => 'pages#help'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

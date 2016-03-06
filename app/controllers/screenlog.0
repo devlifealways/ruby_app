@@ -326,4 +326,580 @@ phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspa
 [0m[01;34mapp[0m     config.ru  [01;34mdoc[0m      Gemfile.lock  [01;34mlog[0m     Rakefile         screenlog.0  [01;34mspec[0m  [01;34mtmp[0m
 [01;34mconfig[0m  [01;34mdb[0m         Gemfile  [01;34mlib[0m           [01;34mpublic[0m  README.markdown  [01;34mscript[0m       [01;34mtest[0m  [01;34mvendor[0m
 phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git add .
-phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git commit -a -m ""
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git commit -a -m ""w"i"t"h" "u"s"e"r"s" "s"i"d"e"
+[modeling-users 3ed7f0b] with users side
+ 8 files changed, 115 insertions(+), 1 deletion(-)
+ create mode 100644 app/controllers/users_controller.rb
+ create mode 100644 app/helpers/users_helper.rb
+ create mode 100644 app/views/users/new.html.erb
+ create mode 100644 spec/controllers/users_controller_spec.rb
+ create mode 100644 spec/helpers/users_helper_spec.rb
+ create mode 100644 spec/views/users/new.html.erb_spec.rb
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m     config.ru  [01;34mdoc[0m      Gemfile.lock  [01;34mlog[0m     Rakefile         screenlog.0  [01;34mspec[0m  [01;34mtmp[0m
+[01;34mconfig[0m  [01;34mdb[0m         Gemfile  [01;34mlib[0m           [01;34mpublic[0m  README.markdown  [01;34mscript[0m       [01;34mtest[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ auto[K[K[K[Kauot[K[Ktotest 
+loading autotest/rails_rspec2
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/pages_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/models/user_spec.rb'
+[32m.[0m[31mF[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[32m.[0m[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+Pending:
+[33m  UsersHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/users_helper_spec.rb:14[0m
+[33m  WelcomeHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/welcome_helper_spec.rb:14[0m
+[33m  users/new.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/users/new.html.erb_spec.rb:4[0m
+[33m  welcome/index.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/welcome/index.html.erb_spec.rb:4[0m
+
+Failures:
+
+  1) UsersController GET 'new' Should have the appropriate title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title",:content=>"Sign up")[0m
+       [31mexpected following output to contain a <title>Sign up</title> tag:[0m
+       [31m<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">[0m
+[90m     # ./spec/controllers/users_controller_spec.rb:13:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.10923 seconds
+[31m12 examples, 1 failure, 4 pending[0m
+
+# Finished at 2016-03-06 21:14:04
+
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb'
+[32m.[0m[31mF[0m
+
+Failures:
+
+  1) UsersController GET 'new' Should have the appropriate title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title",:content=>"Sign up")[0m
+       [31mexpected following output to contain a <title>Sign up</title> tag:[0m
+       [31m<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">[0m
+[90m     # ./spec/controllers/users_controller_spec.rb:13:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.04994 seconds
+[31m2 examples, 1 failure[0m
+
+# Finished at 2016-03-06 21:14:07
+
+^Z
+[1]+  Stopped                 autotest
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [Kphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ autotest 
+loading autotest/rails_rspec2
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/pages_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/models/user_spec.rb'
+[32m.[0m[31mF[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[32m.[0m[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+Pending:
+[33m  UsersHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/users_helper_spec.rb:14[0m
+[33m  WelcomeHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/welcome_helper_spec.rb:14[0m
+[33m  users/new.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/users/new.html.erb_spec.rb:4[0m
+[33m  welcome/index.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/welcome/index.html.erb_spec.rb:4[0m
+
+Failures:
+
+  1) UsersController GET 'new' Should have the appropriate title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title",:content=>"The Sign up page")[0m
+       [31mexpected following output to contain a <title>The Sign up page</title> tag:[0m
+       [31m<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">[0m
+[90m     # ./spec/controllers/users_controller_spec.rb:13:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.10595 seconds
+[31m12 examples, 1 failure, 4 pending[0m
+
+# Finished at 2016-03-06 21:16:58
+
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb'
+[32m.[0m[31mF[0m
+
+Failures:
+
+  1) UsersController GET 'new' Should have the appropriate title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title",:content=>"The Sign up page")[0m
+       [31mexpected following output to contain a <title>The Sign up page</title> tag:[0m
+       [31m<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">[0m
+[90m     # ./spec/controllers/users_controller_spec.rb:13:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.05336 seconds
+[31m2 examples, 1 failure[0m
+
+# Finished at 2016-03-06 21:17:07
+
+q^Z
+[2]+  Stopped                 autotest
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ autotest 
+loading autotest/rails_rspec2
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/pages_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/models/user_spec.rb'
+[32m.[0m[31mF[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[32m.[0m[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+Pending:
+[33m  UsersHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/users_helper_spec.rb:14[0m
+[33m  WelcomeHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/welcome_helper_spec.rb:14[0m
+[33m  users/new.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/users/new.html.erb_spec.rb:4[0m
+[33m  welcome/index.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/welcome/index.html.erb_spec.rb:4[0m
+
+Failures:
+
+  1) UsersController GET 'new' Should have the appropriate title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title",:content=>"The Sign up page")[0m
+       [31mexpected following output to contain a <title>The Sign up page</title> tag:[0m
+       [31m<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">[0m
+[90m     # ./spec/controllers/users_controller_spec.rb:13:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.09843 seconds
+[31m12 examples, 1 failure, 4 pending[0m
+
+# Finished at 2016-03-06 21:18:14
+
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb'
+^Z
+[3]+  Stopped                 autotest
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ autotest 
+loading autotest/rails_rspec2
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/pages_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/models/user_spec.rb'
+[32m.[0m[32m.[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[32m.[0m[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+Pending:
+[33m  UsersHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/users_helper_spec.rb:14[0m
+[33m  WelcomeHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/welcome_helper_spec.rb:14[0m
+[33m  users/new.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/users/new.html.erb_spec.rb:4[0m
+[33m  welcome/index.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/welcome/index.html.erb_spec.rb:4[0m
+
+Finished in 0.09752 seconds
+[33m12 examples, 0 failures, 4 pending[0m
+
+# Finished at 2016-03-06 21:21:32
+
+^Z
+[4]+  Stopped                 autotest
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ autotest 
+loading autotest/rails_rspec2
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/pages_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/models/user_spec.rb'
+[32m.[0m[31mF[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[32m.[0m[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+Pending:
+[33m  UsersHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/users_helper_spec.rb:14[0m
+[33m  WelcomeHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/welcome_helper_spec.rb:14[0m
+[33m  users/new.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/users/new.html.erb_spec.rb:4[0m
+[33m  welcome/index.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/welcome/index.html.erb_spec.rb:4[0m
+
+Failures:
+
+  1) UsersController GET 'new' Should have the appropriate title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title",:content=>"ze Sign up page")[0m
+       [31mexpected following output to contain a <title>ze Sign up page</title> tag:[0m
+       [31m<!DOCTYPE html>[0m
+       [31m<html>[0m
+       [31m<head>[0m
+       [31m<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">[0m
+       [31m  <title>The Sign up page</title>[0m
+       [31m  [0m
+       [31m  <!--[if lt IE 9]>[0m
+       [31m  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>[0m
+       [31m  <![endif]-->[0m
+       [31m  <link href="/stylesheets/css/bootstrap.min.css?1456875133" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m  <!--[if lt IE 8]>[0m
+       [31m  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">[0m
+       [31m  <![endif]-->[0m
+       [31m  <link href="/stylesheets/css/sticky-footer-navbar.css?1456879048" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m  <script src="/javascripts/js/jquery-2.2.1.min.js?1456875133" type="text/javascript"></script>[0m
+       [31m  <script src="/javascripts/js/bootstrap.min.js?1456875133" type="text/javascript"></script>[0m
+       [31m  <!--[if lt IE 8]><link href="/stylesheets/blueprint/ie.css?1456914196" media="screen" rel="stylesheet" type="text/css" /><![endif]-->[0m
+       [31m</head>[0m
+       [31m<body>[0m
+       [31m  <div class="container">[0m
+       [31m    <h1>Users#new</h1>[0m
+       [31m<p>Find me in app/views/users/new.html.erb</p>[0m
+       [31m[0m
+       [31m    [0m
+       [31m  </div>[0m
+       [31m<!--container-->[0m
+       [31m</body>[0m
+       [31m</html>[0m
+[90m     # ./spec/controllers/users_controller_spec.rb:14:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.09782 seconds
+[31m12 examples, 1 failure, 4 pending[0m
+
+# Finished at 2016-03-06 21:21:57
+
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb'
+^Z
+[5]+  Stopped                 autotest
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ autotest 
+loading autotest/rails_rspec2
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/pages_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/models/user_spec.rb'
+[32m.[0m[31mF[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[32m.[0m[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+Pending:
+[33m  UsersHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/users_helper_spec.rb:14[0m
+[33m  WelcomeHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/welcome_helper_spec.rb:14[0m
+[33m  users/new.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/users/new.html.erb_spec.rb:4[0m
+[33m  welcome/index.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/welcome/index.html.erb_spec.rb:4[0m
+
+Failures:
+
+  1) UsersController GET 'new' Should have the appropriate title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title",:content=>"#{@txt[:first].capitalize} Sign up #{@txt[:second].capitalize}")[0m
+       [31mexpected following output to contain a <title>The Sign up Page</title> tag:[0m
+       [31m<!DOCTYPE html>[0m
+       [31m<html>[0m
+       [31m<head>[0m
+       [31m<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">[0m
+       [31m  <title>The Sign up page</title>[0m
+       [31m  [0m
+       [31m  <!--[if lt IE 9]>[0m
+       [31m  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>[0m
+       [31m  <![endif]-->[0m
+       [31m  <link href="/stylesheets/css/bootstrap.min.css?1456875133" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m  <!--[if lt IE 8]>[0m
+       [31m  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">[0m
+       [31m  <![endif]-->[0m
+       [31m  <link href="/stylesheets/css/sticky-footer-navbar.css?1456879048" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m  <script src="/javascripts/js/jquery-2.2.1.min.js?1456875133" type="text/javascript"></script>[0m
+       [31m  <script src="/javascripts/js/bootstrap.min.js?1456875133" type="text/javascript"></script>[0m
+       [31m  <!--[if lt IE 8]><link href="/stylesheets/blueprint/ie.css?1456914196" media="screen" rel="stylesheet" type="text/css" /><![endif]-->[0m
+       [31m</head>[0m
+       [31m<body>[0m
+       [31m  <div class="container">[0m
+       [31m    <h1>Users#new</h1>[0m
+       [31m<p>Find me in app/views/users/new.html.erb</p>[0m
+       [31m[0m
+       [31m    [0m
+       [31m  </div>[0m
+       [31m<!--container-->[0m
+       [31m</body>[0m
+       [31m</html>[0m
+[90m     # ./spec/controllers/users_controller_spec.rb:18:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.10033 seconds
+[31m12 examples, 1 failure, 4 pending[0m
+
+# Finished at 2016-03-06 21:23:03
+
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb'
+^Z
+[6]+  Stopped                 autotest
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ autotest ls[Kgit commit -a -m "with users side"add .[Kls[Kcd ..[3Plscd helpers/ls[Kcd ..[3Plscd ..[3Plscd ..[3Plscd helpers/ls[Kcd ..[H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ cd ..[H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ cd ..[3Plscd ..[3Plscd helpers/ls[Kcd ..[3Plscd ..[3Plscd ..[3Pls[K[K[H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m  [01;34mconfig[0m  config.ru  [01;34mdb[0m  [01;34mdoc[0m  Gemfile  Gemfile.lock  [01;34mlib[0m  [01;34mlog[0m  [01;34mpublic[0m  Rakefile  README.markdown  screenlog.0  [01;34mscript[0m  [01;34mspec[0m  [01;34mtest[0m  [01;34mtmp[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ autotest 
+loading autotest/rails_rspec2
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/pages_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/models/user_spec.rb'
+[32m.[0m"The !"
+[31mF[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[32m.[0m[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+Pending:
+[33m  UsersHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/users_helper_spec.rb:14[0m
+[33m  WelcomeHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/welcome_helper_spec.rb:14[0m
+[33m  users/new.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/users/new.html.erb_spec.rb:4[0m
+[33m  welcome/index.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/welcome/index.html.erb_spec.rb:4[0m
+
+Failures:
+
+  1) UsersController GET 'new' Should have the appropriate title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title",:content=>"#{@txt[:first].capitalize} Sign up #{@txt[:second].capitalize}")[0m
+       [31mexpected following output to contain a <title>The Sign up Page</title> tag:[0m
+       [31m<!DOCTYPE html>[0m
+       [31m<html>[0m
+       [31m<head>[0m
+       [31m<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">[0m
+       [31m  <title>The Sign up page</title>[0m
+       [31m  [0m
+       [31m  <!--[if lt IE 9]>[0m
+       [31m  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>[0m
+       [31m  <![endif]-->[0m
+       [31m  <link href="/stylesheets/css/bootstrap.min.css?1456875133" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m  <!--[if lt IE 8]>[0m
+       [31m  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">[0m
+       [31m  <![endif]-->[0m
+       [31m  <link href="/stylesheets/css/sticky-footer-navbar.css?1456879048" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m  <script src="/javascripts/js/jquery-2.2.1.min.js?1456875133" type="text/javascript"></script>[0m
+       [31m  <script src="/javascripts/js/bootstrap.min.js?1456875133" type="text/javascript"></script>[0m
+       [31m  <!--[if lt IE 8]><link href="/stylesheets/blueprint/ie.css?1456914196" media="screen" rel="stylesheet" type="text/css" /><![endif]-->[0m
+       [31m</head>[0m
+       [31m<body>[0m
+       [31m  <div class="container">[0m
+       [31m    <h1>Users#new</h1>[0m
+       [31m<p>Find me in app/views/users/new.html.erb</p>[0m
+       [31m[0m
+       [31m    [0m
+       [31m  </div>[0m
+       [31m<!--container-->[0m
+       [31m</body>[0m
+       [31m</html>[0m
+[90m     # ./spec/controllers/users_controller_spec.rb:19:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.09997 seconds
+[31m12 examples, 1 failure, 4 pending[0m
+
+# Finished at 2016-03-06 21:25:04
+
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb'
+[32m.[0m"The !"
+[31mF[0m
+
+Failures:
+
+  1) UsersController GET 'new' Should have the appropriate title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title",:content=>"#{@txt[:first].capitalize} Sign up #{@txt[:second].capitalize}")[0m
+       [31mexpected following output to contain a <title>The Sign up Page</title> tag:[0m
+       [31m<!DOCTYPE html>[0m
+       [31m<html>[0m
+       [31m<head>[0m
+       [31m<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">[0m
+       [31m  <title>The Sign up page</title>[0m
+       [31m  [0m
+       [31m  <!--[if lt IE 9]>[0m
+       [31m  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>[0m
+       [31m  <![endif]-->[0m
+       [31m  <link href="/stylesheets/css/bootstrap.min.css?1456875133" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m  <!--[if lt IE 8]>[0m
+       [31m  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">[0m
+       [31m  <![endif]-->[0m
+       [31m  <link href="/stylesheets/css/sticky-footer-navbar.css?1456879048" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m  <script src="/javascripts/js/jquery-2.2.1.min.js?1456875133" type="text/javascript"></script>[0m
+       [31m  <script src="/javascripts/js/bootstrap.min.js?1456875133" type="text/javascript"></script>[0m
+       [31m  <!--[if lt IE 8]><link href="/stylesheets/blueprint/ie.css?1456914196" media="screen" rel="stylesheet" type="text/css" /><![endif]-->[0m
+       [31m</head>[0m
+       [31m<body>[0m
+       [31m  <div class="container">[0m
+       [31m    <h1>Users#new</h1>[0m
+       [31m<p>Find me in app/views/users/new.html.erb</p>[0m
+       [31m[0m
+       [31m    [0m
+       [31m  </div>[0m
+       [31m<!--container-->[0m
+       [31m</body>[0m
+       [31m</html>[0m
+[90m     # ./spec/controllers/users_controller_spec.rb:19:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.04987 seconds
+[31m2 examples, 1 failure[0m
+
+# Finished at 2016-03-06 21:25:05
+
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb'
+[32m.[0m"The !"
+[31mF[0m
+
+Failures:
+
+  1) UsersController GET 'new' Should have the appropriate title
+     [31mFailure/Error:[0m [31mresponse.should have_selector("title",:content=>"#{@txt[:first].capitalize} Sign up #{@txt[:second].capitalize}")[0m
+       [31mexpected following output to contain a <title>The Sign up Page</title> tag:[0m
+       [31m<!DOCTYPE html>[0m
+       [31m<html>[0m
+       [31m<head>[0m
+       [31m<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">[0m
+       [31m  <title>The Sign up page</title>[0m
+       [31m  [0m
+       [31m  <!--[if lt IE 9]>[0m
+       [31m  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>[0m
+       [31m  <![endif]-->[0m
+       [31m  <link href="/stylesheets/css/bootstrap.min.css?1456875133" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m  <!--[if lt IE 8]>[0m
+       [31m  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">[0m
+       [31m  <![endif]-->[0m
+       [31m  <link href="/stylesheets/css/sticky-footer-navbar.css?1456879048" media="screen" rel="stylesheet" type="text/css">[0m
+       [31m  <script src="/javascripts/js/jquery-2.2.1.min.js?1456875133" type="text/javascript"></script>[0m
+       [31m  <script src="/javascripts/js/bootstrap.min.js?1456875133" type="text/javascript"></script>[0m
+       [31m  <!--[if lt IE 8]><link href="/stylesheets/blueprint/ie.css?1456914196" media="screen" rel="stylesheet" type="text/css" /><![endif]-->[0m
+       [31m</head>[0m
+       [31m<body>[0m
+       [31m  <div class="container">[0m
+       [31m    <h1>Users#new</h1>[0m
+       [31m<p>Find me in app/views/users/new.html.erb</p>[0m
+       [31m[0m
+       [31m    [0m
+       [31m  </div>[0m
+       [31m<!--container-->[0m
+       [31m</body>[0m
+       [31m</html>[0m
+[90m     # ./spec/controllers/users_controller_spec.rb:19:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.04961 seconds
+[31m2 examples, 1 failure[0m
+
+# Finished at 2016-03-06 21:25:07
+
+^Z
+[7]+  Stopped                 autotest
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ autotest 
+loading autotest/rails_rspec2
+/home/phoenix/.rvm/rubies/ruby-1.9.2-p330/bin/ruby -rrubygems -S /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/rspec-core-2.5.2/bin/rspec --tty '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/pages_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/controllers/users_controller_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb' '/home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/models/user_spec.rb'
+[32m.[0m[32m.[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[32m.[0m[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+
+Pending:
+[33m  UsersHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/users_helper_spec.rb:14[0m
+[33m  WelcomeHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/welcome_helper_spec.rb:14[0m
+[33m  users/new.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/users/new.html.erb_spec.rb:4[0m
+[33m  welcome/index.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/welcome/index.html.erb_spec.rb:4[0m
+
+Finished in 0.09906 seconds
+[33m12 examples, 0 failures, 4 pending[0m
+
+# Finished at 2016-03-06 21:26:33
+
+^Z
+[8]+  Stopped                 autotest
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rake t[Krot[Kutes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+        root     /(.:format)             {:controller=>"pages", :action=>"index"}
+         new     /new(.:format)          {:controller=>"users", :action=>"new"}
+ pages_index GET /pages/index(.:format)  {:controller=>"pages", :action=>"index"}
+     contact     /contact(.:format)      {:controller=>"users", :action=>"contact"}
+pages_propos GET /pages/propos(.:format) {:controller=>"pages", :action=>"propos"}
+  pages_help GET /pages/help(.:format)   {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rake routes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+        root     /(.:format)             {:controller=>"pages", :action=>"index"}
+         new     /new(.:format)          {:controller=>"users", :action=>"new"}
+ pages_index GET /pages/index(.:format)  {:controller=>"pages", :action=>"index"}
+     contact     /contact(.:format)      {:controller=>"users", :action=>"contact"}
+pages_propos GET /pages/propos(.:format) {:controller=>"pages", :action=>"propos"}
+  pages_help GET /pages/help(.:format)   {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rake routes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+        root     /(.:format)             {:controller=>"pages", :action=>"index"}
+         new     /new(.:format)          {:controller=>"users", :action=>"new"}
+ pages_index GET /pages/index(.:format)  {:controller=>"pages", :action=>"index"}
+     contact     /contact(.:format)      {:controller=>"users", :action=>"contact"}
+pages_propos GET /pages/propos(.:format) {:controller=>"pages", :action=>"propos"}
+  pages_help GET /pages/help(.:format)   {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rake routes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+   root     /(.:format)        {:controller=>"pages", :action=>"index"}
+    new     /new(.:format)     {:controller=>"users", :action=>"new"}
+contact GET /contact(.:format) {:controller=>"pages", :action=>"contact"}
+ propos GET /propos(.:format)  {:controller=>"pages", :action=>"propos"}
+   help GET /help(.:format)    {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m  [01;34mconfig[0m  config.ru  [01;34mdb[0m  [01;34mdoc[0m  Gemfile  Gemfile.lock  [01;34mlib[0m  [01;34mlog[0m  [01;34mpublic[0m  Rakefile  README.markdown  screenlog.0  [01;34mscript[0m  [01;34mspec[0m  [01;34mtest[0m  [01;34mtmp[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ cd public/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/public$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/public$ ls
+404.html  422.html  500.html  favicon.ico  [0m[01;34mimages[0m  [01;34mjavascripts[0m  robots.txt  [01;34mstylesheets[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/public$ lscd public/
+bash: cd: public/: No such file or directory
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/public$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/public$ cd ..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ cd ..public/ls[Kcd public/ls[Krake routes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+   root     /(.:format)        {:controller=>"pages", :action=>"index"}
+    new     /new(.:format)     {:controller=>"users", :action=>"new"}
+contact GET /contact(.:format) {:controller=>"pages", :action=>"contact"}
+ propos GET /propos(.:format)  {:controller=>"pages", :action=>"propos"}
+   help GET /help(.:format)    {:controller=>"pages", :action=>"help"}
+        GET /*(.:format)       {:controller=>"public", :action=>"404"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m  [01;34mconfig[0m  config.ru  [01;34mdb[0m  [01;34mdoc[0m  Gemfile  Gemfile.lock  [01;34mlib[0m  [01;34mlog[0m  [01;34mpublic[0m  Rakefile  README.markdown  screenlog.0  [01;34mscript[0m  [01;34mspec[0m  [01;34mtest[0m  [01;34mtmp[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git rm public/inde[K[K[K[K.index.html 
+rm 'public/.index.html'
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m  [01;34mconfig[0m  config.ru  [01;34mdb[0m  [01;34mdoc[0m  Gemfile  Gemfile.lock  [01;34mlib[0m  [01;34mlog[0m  [01;34mpublic[0m  Rakefile  README.markdown  screenlog.0  [01;34mscript[0m  [01;34mspec[0m  [01;34mtest[0m  [01;34mtmp[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ less public/
+public/ is a directory
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ less public/[1P public/[1P
+404.html  422.html  500.html  favicon.ico  [0m[01;34mimages[0m  [01;34mjavascripts[0m  robots.txt  [01;34mstylesheets[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls public/-public/apublic/ public/
+[0m[01;34m.[0m  [01;34m..[0m  404.html  422.html  500.html  favicon.ico  [01;34mimages[0m  ..index.html  [01;34mjavascripts[0m  robots.txt  [01;34mstylesheets[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls -a public/[3Ppublic/[2@es[C[C[C[C[C[C[C[C[Cs[Kgit rm public/.index.html [1@.[1@.
+fatal: pathspec '..public/.index.html' did not match any files
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git rm ..public/.index.html [Kgit rm ..public/.index.html [1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[1@.
+rm 'public/..index.html'
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m  [01;34mconfig[0m  config.ru  [01;34mdb[0m  [01;34mdoc[0m  Gemfile  Gemfile.lock  [01;34mlib[0m  [01;34mlog[0m  [01;34mpublic[0m  Rakefile  README.markdown  screenlog.0  [01;34mscript[0m  [01;34mspec[0m  [01;34mtest[0m  [01;34mtmp[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rspec  s[K[Kspec/
+[32m.[0m[32m.[0m[33m*[0m[33m*[0m[32m.[0m[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m*[0m[33m*[0m
+
+Pending:
+[33m  WelcomeHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/welcome_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/welcome_helper_spec.rb:14[0m
+[33m  UsersHelper add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/helpers/users_helper_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/helpers/users_helper_spec.rb:14[0m
+[33m  welcome/index.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/welcome/index.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/welcome/index.html.erb_spec.rb:4[0m
+[33m  users/new.html.erb add some examples to (or delete) /home/phoenix/workspace/Rouineb_Hamza/bootstrap/spec/views/users/new.html.erb_spec.rb[0m
+[90m    # Not Yet Implemented[0m
+[90m    # ./spec/views/users/new.html.erb_spec.rb:4[0m
+
+Finished in 0.09826 seconds
+[33m12 examples, 0 failures, 4 pending[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git add .
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git -am ""t"h"e" "e"n"d" "[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"l"a"y"o"u"t"[C[C[C[C "p"h"a"s"e" "[C[C[C[C[C[C[C[C[C[C[C[C[Ce"n"d"
+Unknown option: -am
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git -am "layout phase end"
