@@ -255,4 +255,75 @@ Maybe you wanted to say 'git add .'?
 phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
 [0m[01;34mapp[0m     config.ru  [01;34mdoc[0m      Gemfile.lock  [01;34mlog[0m     Rakefile         screenlog.0  [01;34mspec[0m  [01;34mtmp[0m
 [01;34mconfig[0m  [01;34mdb[0m         Gemfile  [01;34mlib[0m           [01;34mpublic[0m  README.markdown  [01;34mscript[0m       [01;34mtest[0m  [01;34mvendor[0m
-phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git commit -a -m ""
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git commit -a -m ""g"o"o"d" "i"d"n"e"x"[1P"[1P"[1P"[1P"n"d"e"x"
+[modeling-users 0409e5f] good index
+ 20 files changed, 695 insertions(+), 65 deletions(-)
+ create mode 100644 app/controllers/screenlog.0
+ create mode 100644 app/helpers/welcome_helper.rb
+ create mode 100644 app/models/user.rb
+ delete mode 100644 app/views/pages/home.html.erb
+ create mode 100644 app/views/pages/index.html.erb
+ create mode 100644 db/migrate/20160302122815_create_users.rb
+ create mode 100644 db/migrate/20160302173250_add_email_uniqueness_index.rb
+ create mode 100644 db/schema.rb
+ create mode 100644 public/..index.html
+ rename public/{index.html => .index.html} (100%)
+ create mode 100644 screenlog.0
+ rewrite spec/controllers/pages_controller_spec.rb (94%)
+ create mode 100644 spec/helpers/welcome_helper_spec.rb
+ create mode 100644 spec/models/user_spec.rb
+ create mode 100644 spec/views/welcome/index.html.erb_spec.rb
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m     config.ru  [01;34mdoc[0m      Gemfile.lock  [01;34mlog[0m     Rakefile         screenlog.0  [01;34mspec[0m  [01;34mtmp[0m
+[01;34mconfig[0m  [01;34mdb[0m         Gemfile  [01;34mlib[0m           [01;34mpublic[0m  README.markdown  [01;34mscript[0m       [01;34mtest[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rails generate controller Users new 
+[1m[32m      create[0m  app/controllers/users_controller.rb
+[1m[32m       route[0m  get "users/new"
+[1m[37m      invoke[0m  erb
+[1m[32m      create[0m    app/views/users
+[1m[32m      create[0m    app/views/users/new.html.erb
+[1m[37m      invoke[0m  rspec
+[1m[32m      create[0m    spec/controllers/users_controller_spec.rb
+[1m[32m      create[0m    spec/views/users
+[1m[32m      create[0m    spec/views/users/new.html.erb_spec.rb
+[1m[37m      invoke[0m  helper
+[1m[32m      create[0m    app/helpers/users_helper.rb
+[1m[37m      invoke[0m    rspec
+[1m[32m      create[0m      spec/helpers/users_helper_spec.rb
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m     config.ru  [01;34mdoc[0m      Gemfile.lock  [01;34mlog[0m     Rakefile         screenlog.0  [01;34mspec[0m  [01;34mtmp[0m
+[01;34mconfig[0m  [01;34mdb[0m         Gemfile  [01;34mlib[0m           [01;34mpublic[0m  README.markdown  [01;34mscript[0m       [01;34mtest[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m     config.ru  [01;34mdoc[0m      Gemfile.lock  [01;34mlog[0m     Rakefile         screenlog.0  [01;34mspec[0m  [01;34mtmp[0m
+[01;34mconfig[0m  [01;34mdb[0m         Gemfile  [01;34mlib[0m           [01;34mpublic[0m  README.markdown  [01;34mscript[0m       [01;34mtest[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ cd spec/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec$ ls
+[0m[01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmodels[0m  spec_helper.rb  [01;34mviews[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec$ cd views/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/views$ ls
+[0m[01;34musers[0m  [01;34mwelcome[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/views$ cd users/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/views/users$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/views/users$ ls
+new.html.erb_spec.rb
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/views/users$ cd [K[K[Kless new.html.erb_spec.rb 
+[?1049h[?1h=require 'spec_helper'
+
+describe "users/new.html.erb" do
+  pending "add some examples to (or delete) #{__FILE__}"
+end
+[3mnew.html.erb_spec.rb (END)[23m[K[K[?1l>[?1049lphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/views/users$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/views/users$ s[Kcd ..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/views$ ls
+[0m[01;34musers[0m  [01;34mwelcome[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/views$ cd[K[Kcd ..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec$ ls
+[0m[01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmodels[0m  spec_helper.rb  [01;34mviews[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec$ cd helpers/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/helpers$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/helpers$ ls
+users_helper_spec.rb  welcome_helper_spec.rb
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec/helpers$ cd ..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/spec$ cd ..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m     config.ru  [01;34mdoc[0m      Gemfile.lock  [01;34mlog[0m     Rakefile         screenlog.0  [01;34mspec[0m  [01;34mtmp[0m
+[01;34mconfig[0m  [01;34mdb[0m         Gemfile  [01;34mlib[0m           [01;34mpublic[0m  README.markdown  [01;34mscript[0m       [01;34mtest[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git add .
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git commit -a -m ""
