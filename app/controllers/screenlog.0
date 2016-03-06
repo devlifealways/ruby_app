@@ -902,4 +902,93 @@ usage: git [--version] [--help] [-C <path>] [-c name=value]
            [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
            [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
            <command> [<args>]
-phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git -am "layout phase end"
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git -am "layout phase end"[1@ [1@-
+Unknown option: -a
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git -a -m "layout phase end"[2P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@c[1@o[1@m[1@m[1@i[1@t[1@ 
+[modeling-users a5be886] layout phase end
+ 7 files changed, 647 insertions(+), 305 deletions(-)
+ rewrite app/views/pages/index.html.erb (89%)
+ delete mode 100644 public/..index.html
+ delete mode 100644 public/.index.html
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ annotate 
+Nothing annotated!
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rails console --sandbox
+Loading development environment in sandbox (Rails 3.0.7)
+Any modifications you make will be rolled back on exit
+1.9.2-p330 :001 > Users.find()1)
+NameError: uninitialized constant Users
+	from (irb):1
+	from /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/railties-3.0.7/lib/rails/commands/console.rb:44:in `start'
+	from /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/railties-3.0.7/lib/rails/commands/console.rb:8:in `start'
+	from /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/railties-3.0.7/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+1.9.2-p330 :002 > Users.find(1)[KUsers.find(1)[KUsers.find(1)[1P.find(1)
+ => #<User id: 1, name: "Phoenix", email: "r.b@g.c", created_at: "2016-03-06 19:32:09", updated_at: "2016-03-06 19:32:09"> 
+1.9.2-p330 :003 > User.find(1)[1P)2)
+ActiveRecord::RecordNotFound: Couldn't find User with ID=2
+	from /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/activerecord-3.0.7/lib/active_record/relation/finder_methods.rb:304:in `find_one'
+	from /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/activerecord-3.0.7/lib/active_record/relation/finder_methods.rb:289:in `find_with_ids'
+	from /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/activerecord-3.0.7/lib/active_record/relation/finder_methods.rb:107:in `find'
+	from /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/activerecord-3.0.7/lib/active_record/base.rb:439:in `find'
+	from (irb):3
+	from /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/railties-3.0.7/lib/rails/commands/console.rb:44:in `start'
+	from /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/railties-3.0.7/lib/rails/commands/console.rb:8:in `start'
+	from /home/phoenix/.rvm/gems/ruby-1.9.2-p330/gems/railties-3.0.7/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+1.9.2-p330 :004 > [H[J1.9.2-p330 :004 > User.find(2)[1P)[1P)[1P)[1P)[1P)[K[Kmethods
+ => [:_validators, :_accessible_attributes, :_active_authorizer, :original_table_name, :table_name, :original_primary_key, :primary_key, :logger, :logger=, :reset_subclasses, :subclasses, :subclasses_with_deprecation, :subclasses_without_deprecation, :configurations, :configurations=, :primary_key_prefix_type, :primary_key_prefix_type=, :table_name_prefix?, :table_name_prefix=, :table_name_prefix, :table_name_suffix?, :table_name_suffix=, :table_name_suffix, :pluralize_table_names, :pluralize_table_names=, :default_timezone, :default_timezone=, :schema_format, :schema_format=, :timestamped_migrations, :timestamped_migrations=, :_store_full_sti_class=, :store_full_sti_class, :store_full_sti_class?, :store_full_sti_class=, :_store_full_sti_class, :default_scoping, :default_scoping=, :colorize_logging, :colorize_logging=, :find, :first, :last, :all, :exists?, :any?, :many?, :destroy, :destroy_all, :delete, :delete_all, :update, :update_all, :find_each, :find_in_batches, :select, :group, :order, :reorder, :except, :limit, :offset, :joins, :where, :preload, :eager_load, :includes, :from, :lock, :readonly, :having, :create_with, :count, :average, :minimum, :maximum, :sum, :calculate, :find_by_sql, :create, :count_by_sql, :attr_readonly, :readonly_attributes, :serialize, :serialized_attributes, :quoted_table_name, :reset_table_name, :full_table_name_prefix, :inheritance_column, :sequence_name, :reset_sequence_name, :set_table_name, :table_name=, :set_inheritance_column, :inheritance_column=, :set_sequence_name, :sequence_name=, :table_exists?, :columns, :columns_hash, :column_names, :content_columns, :column_methods_hash, :reset_column_information, :reset_column_information_and_inheritable_attributes_for_all_subclasses, :attribute_method?, :lookup_ancestors, :i18n_scope, :descends_from_active_record?, :finder_needs_type_condition?, :inspect, :quote_value, :sanitize, :===, :base_class, :abstract_class, :abstract_class=, :abstract_class?, :respond_to?, :sti_name, :arel_table, :arel_engine, :unscoped, :scoped_methods, :before_remove_const, :with_scope, :with_exclusive_scope, :default_scope, :current_scoped_methods, :reset_scoped_methods, :compute_type, :class_of_active_record_descendant, :sanitize_sql_for_conditions, :sanitize_sql, :sanitize_sql_for_assignment, :aggregate_mapping, :expand_hash_conditions_for_aggregates, :sanitize_sql_hash_for_conditions, :sanitize_sql_hash, :sanitize_sql_hash_for_assignment, :sanitize_sql_array, :sanitize_conditions, :replace_bind_variables, :replace_named_bind_variables, :expand_range_bind_variables, :quote_bound_value, :raise_if_bind_arity_mismatch, :encode_quoted_value, :attributes_protected_by_default, :_validate_callbacks, :_validators?, :_validators=, :lock_optimistically, :lock_optimistically=, :locking_column=, :attribute_types_cached_by_default, :attribute_types_cached_by_default=, :time_zone_aware_attributes, :time_zone_aware_attributes=, :skip_time_zone_conversion_for_attributes, :skip_time_zone_conversion_for_attributes=, :_partial_updates=, :partial_updates, :partial_updates?, :partial_updates=, :_partial_updates, :_accessible_attributes?, :_accessible_attributes=, :_protected_attributes, :_protected_attributes?, :_protected_attributes=, :_active_authorizer?, :_active_authorizer=, :record_timestamps, :record_timestamps=, :_validation_callbacks, :_initialize_callbacks, :after_initialize, :_find_callbacks, :after_find, :_touch_callbacks, :after_touch, :_save_callbacks, :before_save, :around_save, :after_save, :_create_callbacks, :before_create, :around_create, :after_create, :_update_callbacks, :before_update, :around_update, :after_update, :_destroy_callbacks, :before_destroy, :around_destroy, :after_destroy, :nested_attributes_options, :nested_attributes_options=, :include_root_in_json?, :include_root_in_json=, :include_root_in_json, :_commit_callbacks, :_rollback_callbacks, :connection_handler?, :connection_handler=, :connection_handler, :establish_connection, :connection, :connection_pool, :retrieve_connection, :connected?, :remove_connection, :clear_active_connections!, :clear_reloadable_connections!, :clear_all_connections!, :verify_active_connections!, :sqlite3_connection, :composed_of, :transaction, :after_commit, :after_rollback, :create_reflection, :reflections, :reflect_on_all_aggregations, :reflect_on_aggregation, :reflect_on_all_associations, :reflect_on_association, :reflect_on_all_autosave_associations, :has_one, :belongs_to, :has_many, :has_and_belongs_to_many, :accepts_nested_attributes_for, :valid_keys_for_has_many_association, :valid_keys_for_has_many_association=, :valid_keys_for_has_one_association, :valid_keys_for_has_one_association=, :valid_keys_for_belongs_to_association, :valid_keys_for_belongs_to_association=, :valid_keys_for_has_and_belongs_to_many_association, :valid_keys_for_has_and_belongs_to_many_association=, :preload_associations, :scoped, :scopes, :scope, :named_scope, :valid_scope_name?, :before_validation, :after_validation, :before_validation_on_create, :before_validation_on_update, :after_validation_on_create, :after_validation_on_update, :define_model_callbacks, :_define_before_model_callback, :_define_around_model_callback, :_define_after_model_callback, :method_added, :observers=, :observers, :instantiate_observers, :add_observer, :notify_observers, :count_observers, :instantiate_observer, :inherited, :attr_protected, :attr_accessible, :protected_attributes, :accessible_attributes, :active_authorizer, :define_method_attribute, :define_method_attribute=, :quoted_primary_key, :reset_primary_key, :get_primary_key, :set_primary_key, :primary_key=, :cache_attributes, :cached_attributes, :cache_attribute?, :define_attribute_methods, :instance_method_already_implemented?, :defined_activerecord_methods, :define_attr_method, :attribute_method_prefix, :attribute_method_suffix, :attribute_method_affix, :alias_attribute, :undefine_attribute_methods, :generated_attribute_methods, :attribute_methods_generated?, :locking_enabled?, :set_locking_column, :locking_column, :quoted_locking_column, :reset_locking_column, :update_counters, :reset_counters, :increment_counter, :decrement_counter, :create!, :validates_associated, :validates_uniqueness_of, :validates_acceptance_of, :validates_confirmation_of, :validates_exclusion_of, :validates_format_of, :validates_inclusion_of, :validates_length_of, :validates_size_of, :validates_numericality_of, :validates_presence_of, :human_attribute_name, :human_name, :validates_each, :validate, :validate_on_create, :validate_on_update, :validators, :validators_on, :validates, :_parse_validates_options, :validates_with, :__define_runner, :__create_keyed_callback, :__update_callbacks, :set_callback, :skip_callback, :reset_callbacks, :define_callbacks, :direct_descendants, :descendants, :benchmark, :silence, :cache, :uncached, :model_name, :yaml_tag_subclasses?, :allocate, :new, :superclass, :cattr_reader, :cattr_writer, :cattr_accessor, :to_yaml, :duplicable?, :class_inheritable_reader, :class_inheritable_writer, :class_inheritable_array_writer, :class_inheritable_hash_writer, :class_inheritable_accessor, :class_inheritable_array, :class_inheritable_hash, :inheritable_attributes, :write_inheritable_attribute, :write_inheritable_array, :write_inheritable_hash, :read_inheritable_attribute, :reset_inheritable_attributes, :extlib_inheritable_reader, :extlib_inheritable_writer, :extlib_inheritable_accessor, :class_attribute, :superclass_delegating_accessor, :json_creatable?, :freeze, :==, :<=>, :<, :<=, :>, :>=, :to_s, :included_modules, :include?, :name, :ancestors, :instance_methods, :public_instance_methods, :protected_instance_methods, :private_instance_methods, :constants, :const_get, :const_set, :const_defined?, :class_variables, :remove_class_variable, :class_variable_get, :class_variable_set, :class_variable_defined?, :module_exec, :class_exec, :module_eval, :class_eval, :method_defined?, :public_method_defined?, :private_method_defined?, :protected_method_defined?, :public_class_method, :private_class_method, :autoload, :autoload?, :instance_method, :public_instance_method, :remove_possible_method, :redefine_method, :delegate, :deprecate, :alias_method_chain, :syck_yaml_as, :yaml_as, :yaml_tag_class_name, :yaml_tag_read_class, :mattr_reader, :mattr_writer, :mattr_accessor, :instance_method_names, :method_names, :attr_internal_reader, :attr_internal_writer, :attr_internal_accessor, :attr_internal, :anonymous?, :reachable?, :rake_extension, :rake_original_const_missing, :parent_name, :parent, :parents, :local_constants, :local_constant_names, :attr_accessor_with_default, :synchronize, :pretty_print_cycle, :pretty_print, :const_missing, :unloadable, :taguri=, :taguri, :to_yaml_style, :to_yaml_properties, :syck_to_yaml, :blank?, :present?, :presence, :acts_like?, :try, :html_safe?, :`, :returning, :to_param, :to_query, :instance_values, :instance_variable_names, :copy_instance_variables_from, :to_json, :with_options, :as_json, :pretty_print_instance_variables, :pretty_print_inspect, :require_or_load, :require_dependency, :require_association, :load_dependency, :load, :require, :nil?, :=~, :!~, :eql?, :hash, :class, :singleton_class, :clone, :dup, :initialize_dup, :initialize_clone, :taint, :tainted?, :untaint, :untrust, :untrusted?, :trust, :frozen?, :methods, :singleton_methods, :protected_methods, :private_methods, :public_methods, :instance_variables, :instance_variable_get, :instance_variable_set, :instance_variable_defined?, :instance_of?, :kind_of?, :is_a?, :tap, :send, :public_send, :respond_to_missing?, :extend, :display, :method, :public_method, :define_singleton_method, :__id__, :object_id, :to_enum, :enum_for, :gem, :silence_warnings, :enable_warnings, :with_warnings, :silence_stderr, :silence_stream, :suppress, :require_library_or_gem, :debugger, :breakpoint, :suppress_warnings, :pretty_inspect, :equal?, :!, :!=, :instance_eval, :instance_exec, :__send__] 
+1.9.2-p330 :005 > [H[J1.9.2-p330 :005 > User.methods.grep()/)/)?/)\?/)
+ => [:table_name_prefix?, :table_name_suffix?, :store_full_sti_class?, :exists?, :any?, :many?, :table_exists?, :attribute_method?, :descends_from_active_record?, :finder_needs_type_condition?, :abstract_class?, :respond_to?, :_validators?, :partial_updates?, :_accessible_attributes?, :_protected_attributes?, :_active_authorizer?, :include_root_in_json?, :connection_handler?, :connected?, :valid_scope_name?, :cache_attribute?, :instance_method_already_implemented?, :attribute_methods_generated?, :locking_enabled?, :yaml_tag_subclasses?, :duplicable?, :json_creatable?, :include?, :const_defined?, :class_variable_defined?, :method_defined?, :public_method_defined?, :private_method_defined?, :protected_method_defined?, :autoload?, :anonymous?, :reachable?, :blank?, :present?, :acts_like?, :html_safe?, :nil?, :eql?, :tainted?, :untrusted?, :frozen?, :instance_variable_defined?, :instance_of?, :kind_of?, :is_a?, :respond_to_missing?, :equal?] 
+1.9.2-p330 :006 > User.methods.grep(/\?/)[1P/)[1P/)f/)i/)n/)d/)
+ => [:find, :find_each, :find_in_batches, :find_by_sql, :finder_needs_type_condition?, :_find_callbacks, :after_find] 
+1.9.2-p330 :007 > User.methods.grep(/find/)[2P\?/)find/)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[KUser.methods.grep(/find/)_/)b/)y/)
+ => [:find_by_sql] 
+1.9.2-p330 :008 > User.methods.grep(/find_by/)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[KUser.find_by_email()')')"')<')[1P')[1P')@')
+ => nil 
+1.9.2-p330 :009 > User.all[H[J1.9.2-p330 :009 > User.all
+ => [#<User id: 1, name: "Phoenix", email: "r.b@g.c", created_at: "2016-03-06 19:32:09", updated_at: "2016-03-06 19:32:09">] 
+1.9.2-p330 :010 > 
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m  [01;34mconfig[0m  config.ru  [01;34mdb[0m  [01;34mdoc[0m  Gemfile  Gemfile.lock  [01;34mlib[0m  [01;34mlog[0m  [01;34mpublic[0m  Rakefile  README.markdown  screenlog.0  [01;34mscript[0m  [01;34mspec[0m  [01;34mtest[0m  [01;34mtmp[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ cd app/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app$ cd views/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ ls
+[0m[01;34mlayouts[0m  [01;34mpages[0m  [01;34musers[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ cd users/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views/users$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views/users$ ls
+new.html.erb
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views/users$ cd ..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ ls
+[0m[01;34mlayouts[0m  [01;34mpages[0m  [01;34musers[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ rka[K[Kake tour[K[K[K[Krtou[K[K[Koutes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+   root     /(.:format)        {:controller=>"pages", :action=>"index"}
+    new     /new(.:format)     {:controller=>"users", :action=>"new"}
+contact GET /contact(.:format) {:controller=>"pages", :action=>"contact"}
+ propos GET /propos(.:format)  {:controller=>"pages", :action=>"propos"}
+   help GET /help(.:format)    {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ rake toute[K[K[K[K[Krtou[K[K[Koutes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+    users GET    /users(.:format)          {:action=>"index", :controller=>"users"}
+          POST   /users(.:format)          {:action=>"create", :controller=>"users"}
+ new_user GET    /users/new(.:format)      {:action=>"new", :controller=>"users"}
+edit_user GET    /users/:id/edit(.:format) {:action=>"edit", :controller=>"users"}
+     user GET    /users/:id(.:format)      {:action=>"show", :controller=>"users"}
+          PUT    /users/:id(.:format)      {:action=>"update", :controller=>"users"}
+          DELETE /users/:id(.:format)      {:action=>"destroy", :controller=>"users"}
+     root        /(.:format)               {:controller=>"pages", :action=>"index"}
+      new        /new(.:format)            {:controller=>"users", :action=>"new"}
+  contact GET    /contact(.:format)        {:controller=>"pages", :action=>"contact"}
+   propos GET    /propos(.:format)         {:controller=>"pages", :action=>"propos"}
+     help GET    /help(.:format)           {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ git add.[K .
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ ls
+[0m[01;34mlayouts[0m  [01;34mpages[0m  [01;34musers[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ git commit -am ""s"h"o" "[1P"w"i"n"g" "u"s"e"r"s" "j"u"s"t" "f"i"n"i"c"

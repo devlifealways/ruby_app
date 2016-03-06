@@ -1,8 +1,7 @@
 Static::Application.routes.draw do
+  resources :users
 
   root :to => "pages#index"
-
-  # get 'users/new'
 
   match '/new', :to => 'users#new'
 
