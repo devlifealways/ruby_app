@@ -1,0 +1,258 @@
+[Kphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/controllers$ ls
+application_controller.rb  pages_controller.rb  screenlog.0  welcome_controller.rb
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/controllers$ cd ..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app$ ls
+[0m[01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app$ cd ../db/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/db$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/db$ ls
+development.sqlite3  [0m[01;34mmigrate[0m  schema.rb  seeds.rb  test.sqlite3
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/db$ cd migrate/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/db/migrate$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/db/migrate$ ls
+20160302122815_create_users.rb  20160302173250_add_email_uniqueness_index.rb
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/db/migrate$ sqlite3 2016[K[K[K[K[K[K[K[K[K[K[K[Kcd ..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/db$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/db$ ls
+development.sqlite3  [0m[01;34mmigrate[0m  schema.rb  seeds.rb  test.sqlite3
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/db$ sqlite3 development.sqlite3 
+SQLite version 3.8.2 2013-12-06 14:53:30
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> [H[Jsqlite> .tal[Kbles
+schema_migrations  users            
+sqlite> selec.tablesschemaselect * from users;[C[C[C[C[C[C[C[C[13P.schemaselect * from users;
+1|Phoenix|r.b@g.c|2016-03-06 19:32:09.007124|2016-03-06 19:32:09.007124
+sqlite> select * from users;[C[C[C[C[C[C[C[C[Kselect * from users;[C[C[C[C[C[C[C[C[K
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/db$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/db$ cd ..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m     config.ru  [01;34mdoc[0m      Gemfile.lock  [01;34mlog[0m     Rakefile         screenlog.0  [01;34mspec[0m  [01;34mtmp[0m
+[01;34mconfig[0m  [01;34mdb[0m         Gemfile  [01;34mlib[0m           [01;34mpublic[0m  README.markdown  [01;34mscript[0m       [01;34mtest[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rails console 
+Loading development environment (Rails 3.0.7)
+1.9.2-p330 :001 > [H[J1.9.2-p330 :001 > 
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ 
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ sl[K[K[H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m     config.ru  [01;34mdoc[0m      Gemfile.lock  [01;34mlog[0m     Rakefile         screenlog.0  [01;34mspec[0m  [01;34mtmp[0m
+[01;34mconfig[0m  [01;34mdb[0m         Gemfile  [01;34mlib[0m           [01;34mpublic[0m  README.markdown  [01;34mscript[0m       [01;34mtest[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rake toutes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+rake aborted!
+Don't know how to build task 'toutes'
+
+(See full trace by running task with --trace)
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rake toutes[1Poutesroutes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+         root     /(.:format)              {:controller=>"welcome", :action=>"index"}
+welcome_index GET /welcome/index(.:format) {:controller=>"welcome", :action=>"index"}
+   pages_home GET /pages/home(.:format)    {:controller=>"pages", :action=>"home"}
+pages_contact GET /pages/contact(.:format) {:controller=>"pages", :action=>"contact"}
+ pages_propos GET /pages/propos(.:format)  {:controller=>"pages", :action=>"propos"}
+   pages_help GET /pages/help(.:format)    {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rake routes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+         root     /(.:format)              {:controller=>"welcome", :action=>"index"}
+   pages_home GET /pages/home(.:format)    {:controller=>"pages", :action=>"home"}
+pages_contact GET /pages/contact(.:format) {:controller=>"pages", :action=>"contact"}
+ pages_propos GET /pages/propos(.:format)  {:controller=>"pages", :action=>"propos"}
+   pages_help GET /pages/help(.:format)    {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rake routes[Kphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ rake routes[Krake routes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+         root     /(.:format)              {:controller=>"welcome", :action=>"index"}
+welcome_index GET /welcome/index(.:format) {:controller=>"welcome", :action=>"index"}
+   pages_home GET /pages/home(.:format)    {:controller=>"pages", :action=>"home"}
+pages_contact GET /pages/contact(.:format) {:controller=>"pages", :action=>"contact"}
+ pages_propos GET /pages/propos(.:format)  {:controller=>"pages", :action=>"propos"}
+   pages_help GET /pages/help(.:format)    {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [Kphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ 
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ killall atom
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [Kphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m  [01;34mconfig[0m  config.ru  [01;34mdb[0m  [01;34mdoc[0m  Gemfile  Gemfile.lock  [01;34mlib[0m  [01;34mlog[0m  [01;34mpublic[0m  Rakefile  README.markdown  screenlog.0  [01;34mscript[0m  [01;34mspec[0m  [01;34mtest[0m  [01;34mtmp[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ cd app/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app$ cd db[K[K[K[K[Kc[Kls
+[0m[01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app$ cd views/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ ls
+[0m[01;34mlayouts[0m  [01;34mpages[0m  [01;34mwelcome[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ cd [K[K[Kless welv[Kcome/index.html.erb 
+[?1049h[?1h=
+<div class="header clearfix">
+  <nav>
+    <ul class="nav nav-pills pull-right">
+      <li role="presentation" class="active"><a href="#">Sign up</a></li>
+      <li role="presentation"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">About</a></li>
+      <li role="presentation"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <h3 class="text-muted">Ruby's Project !</h3>
+</div>
+
+<div class="jumbotron">
+  <h1>Jumbotron heading</h1>
+  <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+  <p>
+    <div class="text-center">
+      <a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a>
+    </div>
+  </p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-6">
+    <h4>Subheading</h4>
+[3mwelcome/index.html.erb[23m[K[K [KESCESC[KOO[KAA[K[K:[K[K[?1l>[?1049lphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ ls
+[0m[01;34mlayouts[0m  [01;34mpages[0m  [01;34mwelcome[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ less pages/
+contact.html.erb  help.html.erb     home.html.erb     index.html.erb    propos.html.erb   
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ less pages/hp[Ko[K[Kindex.html.erb 
+[?1049h[?1h=<h1>Finally It's working !</h1>
+[3mpages/index.html.erb (END)[23m[K[K[?1l>[?1049lphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ less pages/index.html.erb s[Kess welcome/index.html.erb [C[C>>[K pages/idne[K[K[Kndex.html.erb 
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ ls
+[0m[01;34mlayouts[0m  [01;34mpages[0m  [01;34mwelcome[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ lsess welcome/index.html.erb > pages/index.html.erb [25P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=
+<div class="header clearfix">
+  <nav>
+    <ul class="nav nav-pills pull-right">
+      <li role="presentation" class="active"><a href="#">Sign up</a></li>
+      <li role="presentation"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">About</a></li>
+      <li role="presentation"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <h3 class="text-muted">Ruby's Project !</h3>
+</div>
+
+<div class="jumbotron">
+  <h1>Jumbotron heading</h1>
+  <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+  <p>
+    <div class="text-center">
+      <a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a>
+    </div>
+  </p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-6">
+    <h4>Subheading</h4>
+[3mpages/index.html.erb[23m[K[K[?1l>[?1049lphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ less pages/index.html.erb s[Kess welcome/index.html.erb > pages/index.html.erb [25P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs[Kess welcome/index.html.erb s[Kcd views/ls[Kcd views/ls[Kcd views/ls[Kcd app/ls[Kkillall atom[1Prake routes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+         root     /(.:format)              {:controller=>"pages", :action=>"index"}
+  pages_index GET /pages/index(.:format)   {:controller=>"pages", :action=>"index"}
+   pages_home GET /pages/home(.:format)    {:controller=>"pages", :action=>"home"}
+pages_contact GET /pages/contact(.:format) {:controller=>"pages", :action=>"contact"}
+ pages_propos GET /pages/propos(.:format)  {:controller=>"pages", :action=>"propos"}
+   pages_help GET /pages/help(.:format)    {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ rake routes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+         root     /(.:format)              {:controller=>"pages", :action=>"index"}
+  pages_index GET /pages/index(.:format)   {:controller=>"pages", :action=>"index"}
+   pages_home GET /pages/home(.:format)    {:controller=>"pages", :action=>"home"}
+pages_contact GET /pages/contact(.:format) {:controller=>"pages", :action=>"contact"}
+ pages_propos GET /pages/propos(.:format)  {:controller=>"pages", :action=>"propos"}
+   pages_help GET /pages/help(.:format)    {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ rake routes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+         root     /(.:format)              {:controller=>"pages", :action=>"index"}
+  pages_index GET /pages/index(.:format)   {:controller=>"pages", :action=>"index"}
+   pages_home GET /pages/home(.:format)    {:controller=>"pages", :action=>"home"}
+pages_contact GET /pages/contact(.:format) {:controller=>"pages", :action=>"contact"}
+ pages_propos GET /pages/propos(.:format)  {:controller=>"pages", :action=>"propos"}
+   pages_help GET /pages/help(.:format)    {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ rake routes
+(in /home/phoenix/workspace/Rouineb_Hamza/bootstrap)
+         root     /(.:format)              {:controller=>"pages", :action=>"index"}
+  pages_index GET /pages/index(.:format)   {:controller=>"pages", :action=>"index"}
+pages_contact GET /pages/contact(.:format) {:controller=>"pages", :action=>"contact"}
+ pages_propos GET /pages/propos(.:format)  {:controller=>"pages", :action=>"propos"}
+   pages_help GET /pages/help(.:format)    {:controller=>"pages", :action=>"help"}
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ ls
+[0m[01;34mlayouts[0m  [01;34mpages[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ cd pages/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views/pages$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views/pages$ ls
+contact.html.erb  help.html.erb  index.html.erb  propos.html.erb
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views/pages$ cd ..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ mkdir user[Kphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ mkdir userc[K[K[K[K[K[K[K[K[K[K[Kcd ..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app$ ls
+[0m[01;34mcontrollers[0m  [01;34mhelpers[0m  [01;34mmailers[0m  [01;34mmodels[0m  [01;34mviews[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app$ cd controllers/
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/controllers$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/controllers$ ls
+application_controller.rb  pages_controller.rb  screenlog.0
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/controllers$ git log
+[?1h=[33m5568746057d28271afd8d23630f7709b6cf3395e[m blueprint[m
+[33m832590f4236fef564e2c792da290d2b38bcf890a[m blueprint[m
+[K[?1l>phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/controllers$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/controllers$ ls
+application_controller.rb  pages_controller.rb  screenlog.0
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/controllers$ git status 
+On branch modeling-users
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   ../../Gemfile[m
+	[31mmodified:   ../../Gemfile.lock[m
+	[31mmodified:   pages_controller.rb[m
+	[31mmodified:   ../views/layouts/application.html.erb[m
+	[31mdeleted:    ../views/pages/home.html.erb[m
+	[31mmodified:   ../../config/routes.rb[m
+	[31mdeleted:    ../../public/index.html[m
+	[31mmodified:   ../../spec/controllers/pages_controller_spec.rb[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mscreenlog.0[m
+	[31m../helpers/welcome_helper.rb[m
+	[31m../models/[m
+	[31m../views/pages/index.html.erb[m
+	[31m../../db/migrate/[m
+	[31m../../db/schema.rb[m
+	[31m../../public/..index.html[m
+	[31m../../public/.index.html[m
+	[31m../../screenlog.0[m
+	[31m../../spec/helpers/[m
+	[31m../../spec/models/[m
+	[31m../../spec/views/[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/controllers$ q[Kgit c[Kadd .
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/controllers$ cd[K[Kcd ../..
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git add .
+warning: You ran 'git add' with neither '-A (--all)' or '--ignore-removal',
+whose behaviour will change in Git 2.0 with respect to paths you removed.
+Paths like 'app/views/pages/home.html.erb' that are
+removed from your working tree are ignored with this version of Git.
+
+* 'git add --ignore-removal <pathspec>', which is the current default,
+  ignores paths you removed from your working tree.
+
+* 'git add --all <pathspec>' will let you also record the removals.
+
+Run 'git status' to check the paths you removed from your working tree.
+
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git add .[C[1@-
+Unknown option: -add
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git -add .[C[C[C[C[C[1P
+warning: You ran 'git add' with neither '-A (--all)' or '--ignore-removal',
+whose behaviour will change in Git 2.0 with respect to paths you removed.
+Paths like 'app/views/pages/home.html.erb' that are
+removed from your working tree are ignored with this version of Git.
+
+* 'git add --ignore-removal <pathspec>', which is the current default,
+  ignores paths you removed from your working tree.
+
+* 'git add --all <pathspec>' will let you also record the removals.
+
+Run 'git status' to check the paths you removed from your working tree.
+
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git add .[1@-[C[C[C[C[C[1P[C[C[C[C[C[1Pcd ../..git add .status ls[Kgit logls[Kcd controllers/ls[Kcd ..[3Plscd controllers/ls[Kgit logls[Kgit status [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git status [2Padd .[1Pcd ../..git add .[1Pcd ../..git add .[K
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ ls
+[0m[01;34mapp[0m     config.ru  [01;34mdoc[0m      Gemfile.lock  [01;34mlog[0m     Rakefile         screenlog.0  [01;34mspec[0m  [01;34mtmp[0m
+[01;34mconfig[0m  [01;34mdb[0m         Gemfile  [01;34mlib[0m           [01;34mpublic[0m  README.markdown  [01;34mscript[0m       [01;34mtest[0m  [01;34mvendor[0m
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap$ git commit -a -m ""

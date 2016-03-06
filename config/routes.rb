@@ -1,5 +1,8 @@
 Static::Application.routes.draw do
-  get "pages/home"
+
+  root :to => "pages#index"
+
+  get "pages/index"
 
   get "pages/contact"
 
