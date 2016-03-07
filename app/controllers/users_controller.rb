@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @title = "sign up"
     @user = User.find(params[:id])
+    @title = @user.name
   end
 
 

@@ -991,4 +991,12 @@ edit_user GET    /users/:id/edit(.:format) {:action=>"edit", :controller=>"users
 phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ git add.[K .
 phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ ls
 [0m[01;34mlayouts[0m  [01;34mpages[0m  [01;34musers[0m
-phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ git commit -am ""s"h"o" "[1P"w"i"n"g" "u"s"e"r"s" "j"u"s"t" "f"i"n"i"c"
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ git commit -am ""s"h"o" "[1P"w"i"n"g" "u"s"e"r"s" "j"u"s"t" "f"i"n"i"c"[1P"s"h"e"d"
+[modeling-users 3c2b590] showing users just finished
+ 6 files changed, 106 insertions(+), 4 deletions(-)
+ create mode 100644 app/views/users/show.html.erb
+phoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ [H[Jphoenix@robot:~/workspace/Rouineb_Hamza/bootstrap/app/views$ 
+Broadcast message from root@robot
+	(unknown) at 0:34 ...
+
+The system is going down for power off NOW!

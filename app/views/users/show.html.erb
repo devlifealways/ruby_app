@@ -1,1 +1,20 @@
-<%=@user.name %>,<%= @user.email%>
+<div class="">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Avatar</th>
+        <th>Information</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= gravatar_for @user,:class => "img-circle",:size=>40 %>
+        </td>
+        <td>
+          <%= @user.name %>,<%= @user.email %> --> <%= link_to user_path(@user), user_path(@user) %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
