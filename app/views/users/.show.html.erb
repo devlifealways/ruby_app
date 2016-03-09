@@ -1,0 +1,27 @@
+<% content_for :head do %>
+<%= stylesheet_link_tag 'css/commun'%>
+<% end %>
+<div class="container space pretty-form" >
+  <div class="row text-center">
+    <%= image_tag "me.png",:width=>"70",:height=>"70",:class=>"img-circle space",:alt=>"#{@user.name}" %>
+  </div>
+  <hr>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Avatar</th>
+        <th>Information</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= gravatar_for @user,:class => "img-circle",:size=>40 %>
+        </td>
+        <td>
+          <%= @user.name %>,<%= @user.email %> --> <%= link_to user_path(@user), user_path(@user) %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -11,5 +11,7 @@ module UsersHelper
     :alt=>user.name.capitalize,
     :gravatar=>options
   end
-
+  def checked
+    1
+  end
 end

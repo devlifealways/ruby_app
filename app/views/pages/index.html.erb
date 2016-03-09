@@ -1,22 +1,17 @@
-
-<div class="header clearfix">
-  <nav>
-    <ul class="nav nav-pills pull-right">
-      <li role="presentation" class="active"><%= link_to "Sign up",new_path %></a></li>
-      <li role="presentation"><a href="#">Home</a></li>
-      <li role="presentation"><%= link_to "About",propos_path %></a></li>
-      <li role="presentation"><%= link_to "Contact",contact_path %></a></li>
-      </ul>
-    </nav>
-    <h3 class="text-muted">Ruby's Project !</h3>
-  </div>
-
-  <div class="jumbotron">
-    <h1>Jumbotron heading </h1>
-    <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'css/commun'%>
+  <% end %>
+  <div class="jumbotron space">
+    <h1> Welcome to the users friendly website </h1>
+    <p class="lead">
+      This website was made using ruby on rails framework, which is fascinating indeed !
+    </p>
     <p>
       <div class="text-center">
-        <a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a>
+        <!-- <a class="btn btn-lg btn-success" href="" role="button">Join us today <span class="glyphicon glyphicon-thumbs-up"></span></a> -->
+        <%= link_to new_path,:class=>"btn btn-lg btn-success",:role=>"button"  do %>
+          <b>Join us today&nbsp;</b><span class="glyphicon glyphicon-thumbs-up"></span>
+        <%end%>
       </div>
     </p>
   </div>
@@ -44,7 +39,3 @@
       <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
     </div>
   </div>
-
-  <footer class="footer">
-    <p>&copy; 2015 Company, Inc.</p>
-  </footer>

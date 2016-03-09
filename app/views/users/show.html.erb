@@ -1,20 +1,43 @@
-<div class="">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Avatar</th>
-        <th>Information</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <%= gravatar_for @user,:class => "img-circle",:size=>40 %>
-        </td>
-        <td>
-          <%= @user.name %>,<%= @user.email %> --> <%= link_to user_path(@user), user_path(@user) %>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container space pretty-form" >
+  <% if flash.has_key?(:success)  %>
+  <% flash.each do |key,value| %>
+  <div class="alert alert-<%= key %> alert-dismissible space" id="remove-me" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <%= value %>
+  </div>
+  <% end %>
+  <% end %>
+  <div class="row text-center clearfix">
+    <%= image_tag "me.png",:width=>"70",
+    :height=>"70",
+    :class=>"img-circle space",
+    :alt=>"#{@user.name}" %>
+    <h3 class=""><b style="color:white"><%= @user.name.capitalize %></b></h3>
+  </div>
+  <hr>
+  <div class="col-md-4 clearfix" style="color:white">
+    <%= label "name","Name : " %>
+  </div>
+  <div class="col-md-4 col-md-offset-2 clearfix" style="color:white">
+    <%= label "name-value","#{@user.name.capitalize} " %>
+  </div>
+  <div class="col-md-4 clearfix" style="color:white">
+    <%= label "email","Email : " %>
+  </div>
+  <div class="col-md-4 col-md-offset-2 clearfix" style="color:white">
+    <%= label "email-value","#{@user.email.capitalize} " %>
+  </div>
+  <div class="col-md-4 clearfix" style="color:white">
+    <%= label "URL","URL : " %>
+  </div>
+  <div class="col-md-4 col-md-offset-2 clearfix" style="color:white">
+    <label>
+      <%= link_to "#{user_path(@user)}","#{user_path(@user)}",:style=>"color:white" %>
+    </label>
+  </div>
 </div>
+<% content_for :script do %>
+<%=  javascript_include_tag 'commun'%>
+<% end %>

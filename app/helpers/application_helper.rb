@@ -7,5 +7,10 @@ module ApplicationHelper
       "#{default} - [#{@title.capitalize}]"
     end
   end
+  # just a simple function used inside the footer of each page
+  def creator
+    "Made by ROUINEB Hamza. 2016"
+  end
+
 
 end
