@@ -28,5 +28,30 @@ describe "Users" do
       end.should change(User,:count).by(1)
     end
 
+    it 'the form should have the name input' do
+      visit new_user_path
+      response.should render_template('users/new')
+      response.should have_xpath("//input[@id='user_name']")
+    end
+
+    it 'the form should have the email input' do
+      visit new_user_path
+      response.should render_template('users/new')
+      response.should have_xpath("//input[@id='user_email']")
+    end
+
+    it 'the form should have the password input' do
+      visit new_user_path
+      response.should render_template('users/new')
+      response.should have_xpath("//input[@id='user_password']")
+    end
+
+    it 'the form should have the name input' do
+      visit new_user_path
+      response.should render_template('users/new')
+      response.should have_xpath("//input[@id='user_password_confirmation']")
+    end
+    
+
   end
 end

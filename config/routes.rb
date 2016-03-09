@@ -1,4 +1,6 @@
 Static::Application.routes.draw do
+  get "sessions/new"
+
   resources :users
 
   root :to => "pages#index"
