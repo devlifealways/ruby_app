@@ -51,7 +51,32 @@ describe "Users" do
       response.should render_template('users/new')
       response.should have_xpath("//input[@id='user_password_confirmation']")
     end
-    
+
 
   end
+
+  describe "sign in/sign out" do
+
+    it "should be rejected at first glance" do
+      visit signin_path
+      fill_in "session_email", :with => ""
+      fill_in "session_password", :with => ""
+      click_button "session_submit"
+      response.should have_xpath("//div[@class='alert alert-danger alert-dismissible space']")
+    end
+
+    it "should give access to user's profile " do
+      user = Factory(:user)
+      visit signin_path
+      fill_in "session_email", :with => user.email
+      fill_in "session_password", :with => user.password
+      click_button "session_submit"
+      controller.should be_signed_in
+      click_link "signout"
+      controller.should_not be_signed_in
+    end
+
+
+  end
+
 end

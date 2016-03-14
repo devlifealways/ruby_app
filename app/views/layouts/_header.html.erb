@@ -19,7 +19,42 @@
         <li><%= link_to "About",propos_path,:style=>"font-weight:bold" %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign up",new_path,:style=>"font-weight:bold" %></li>
+        <% if !signed_in? %>
+        <li>
+          <%= link_to new_path,:style=>"font-weight:bold" do %>
+          Sign up
+          <span class="glyphicon glyphicon-pencil"></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_session_path,:style=>"font-weight:bold" do %>
+          Sign in
+          <span class="glyphicon glyphicon-user"></span>
+          <% end %>
+        </li>
+        <% else %>
+        <li>
+          <%= link_to user_path(@user),:style=>"font-weight:bold" do %>
+          Profile
+          <span class="glyphicon glyphicon-home"></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#",:style=>"font-weight:bold" do %>
+          Help
+          <span class="glyphicon glyphicon-question-sign"></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to signout_path,:id=>"signout",:style=>"font-weight:bold;color:white;text-decoration:none;",:method => :delete do %>
+          Sign out
+          <span class="glyphicon glyphicon-off"></span>
+        </li>
+
+        <% end %>
+
+        <% end %>
+
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container-fluid -->

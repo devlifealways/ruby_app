@@ -1,0 +1,10 @@
+<% if !flash.nil? and flash.has_key?(:danger)  %>
+<% flash.each do |key,value| %>
+<div class="alert alert-<%= key %> alert-dismissible space" id="remove-me" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <%= value %>
+</div>
+<% end %>
+<% end %>

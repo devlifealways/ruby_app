@@ -1,2 +1,29 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<% content_for :head do %>
+<%= stylesheet_link_tag 'css/signin'%>
+<% end %>
+<div class="well well-lg pretty-form">
+  <%= form_for :session,:url=>sessions_path,:html=>{:class=>"form-signin space"} do |form| %>
+  <%= render 'shared/error_messages_signin' %>
+  <fieldset>
+    <legend style="font-size:2.5em">Please sign in</legend>
+
+    <%= form.label :email,:for=>"sr-only"%>
+
+    <%= form.email_field :email,
+    :class=>"form-control",
+    :required=>true,
+    :placeholder=>"Tape here your email please ...."
+    %>
+
+    <%= form.label :password,:for=>"sr-only" %>
+    <%= form.password_field :password,:class=>"form-control field_with_errors",
+    :require=>true,:placeholder=>"password ..." %>
+
+    <%= form.submit "Sign in !",
+    :class=>"btn btn-lg btn-primary btn-block" %>
+    <% end %>
+
+    <p>New user ? <%= link_to "Sign up now !",new_path,:style=>"font-weight:bold;color:white;" %></p>
+
+  </fieldset>
+</div>

@@ -11,6 +11,4 @@ module ApplicationHelper
   def creator
     "Made by ROUINEB Hamza. 2016"
   end
-
-
 end

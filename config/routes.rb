@@ -1,11 +1,16 @@
 Static::Application.routes.draw do
-  get "sessions/new"
-
   resources :users
+  resources :sessions,:only =>[:new,:create,:destroy]
 
   root :to => "pages#index"
 
   match '/new', :to => 'users#new'
+
+  match '/sessions', :to => 'sessions#create'
+
+  match '/signin',:to => 'sessions#new'
+
+  match '/signout',:to => 'sessions#destroy'
 
   get '/contact', :to => 'pages#contact'
 

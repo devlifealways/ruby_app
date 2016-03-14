@@ -109,6 +109,7 @@ describe User do
         good_guy = User.authenticate(@attr[:email],@attr[:password])
         good_guy.should == @user
       end
+
     end
 
   end
