@@ -25,7 +25,24 @@ module SessionsHelper
     self.current_user = nil
   end
 
+  def current_user?(user)
+    user == current_user
+  end
+
+
+
+  def redirect_back_or(default)
+    redirect_to(session[:return_to] || default)
+    clear_return_to
+  end
+
   private
+
+  def deny_access
+    store_location
+    flash[:warning] = "Please log in before trying to access this page !"
+    redirect_to signin_path
+  end
 
   def user_from_remember_token
     User.authenticate_with_salt(*remember_token)
@@ -34,5 +51,15 @@ module SessionsHelper
   def remember_token
     cookies.signed[:remember_token] || [nil, nil]
   end
+
+  def store_location
+    session[:return_to] = request.fullpath
+  end
+
+  def clear_return_to
+    session[:return_to] = nil
+  end
+
+
 
 end

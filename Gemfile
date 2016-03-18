@@ -8,12 +8,14 @@ gem 'rails', '3.0.7'
 #Force the bundler to install this version, not the latest one (which is incompatible with rails 3.0.7)
 gem 'rake', '0.8.7'
 gem 'gravatar_image_tag', '1.0.0.pre2'
+gem 'will_paginate', '3.0.pre2'
 
 group :development do
   gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
   gem 'rspec-rails', '2.5.0'
   gem 'tomkersten-annotate-models', '1.0.4'
   gem 'bootstrap-validator-rails'
+  gem 'faker', '0.3.1'
 end
 
 group :test do

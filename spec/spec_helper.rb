@@ -22,6 +22,13 @@ RSpec.configure do |config|
     controller.sign_in user
   end
 
+  def integration_sign_in(user)
+    visit signin_path
+    fill_in "eMail",    :with => user.email
+    fill_in "Mot de passe", :with => user.password
+    click_button
+  end
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

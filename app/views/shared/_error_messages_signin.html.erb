@@ -1,4 +1,4 @@
-<% if !flash.nil? and flash.has_key?(:danger)  %>
+<% if !flash.nil? and (flash.has_key?(:danger) or flash.has_key?(:warning))  %>
 <% flash.each do |key,value| %>
 <div class="alert alert-<%= key %> alert-dismissible space" id="remove-me" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">

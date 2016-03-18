@@ -1,0 +1,59 @@
+<div class="well well-lg pretty-form">
+  <%= form_for @user,:html=>{:class=>"form-signin space"} do |form| %>
+  <%= render 'shared/error_messages_signin' %>
+  <fieldset>
+    <legend style="font-size:2.5em;color:white;"><%= @user.name.capitalize %> modification page </legend>
+
+    <div class="row text-center">
+      <!-- <%= image_tag "me.png",:width=>"70",:height=>"70",:class=>"img-circle space",:alt=>"#{@user.name}" %> -->
+      <%= gravatar_for current_user%>
+      <!-- <input type="file"/>Change me -->
+      <label class="btn btn-primary" for="my-file-selector" style="font-weight:bold;background-color:transparent;border-color:white;">
+        <a href="http://gravatar.com/emails" style="color:white;text-decoration:none;">
+          change picture
+        </a>
+        <span style="color:white;text-decoration:none;margin-left:2%;" class="glyphicon glyphicon-pushpin"></span>
+      </label>
+
+    </div>
+
+    <%= form.label :name,:for=>"sr-only"%>
+    <%= form.text_field :name,:class=>"form-control",
+    :required=>true,
+    :autofocus=>true,
+    :style=>"margin-bottom:3%;",
+    :placeholder=>"Tape here your name please ...."
+    %>
+
+
+    <%= form.label :email,:for=>"sr-only"%>
+    <%= form.email_field :email,
+    :class=>"form-control",
+    :required=>true,
+    :style=>"margin-bottom:3%;",
+    :placeholder=>"Tape here your email please ...."
+    %>
+
+    <%= form.label :password,:for=>"sr-only" %>
+    <%= form.password_field :password,
+    :class=>"form-control field_with_errors",
+    :require=>true,
+    :style=>"margin-bottom:3%;",
+    :placeholder=>"password ..."
+    %>
+
+    <%= form.label :password_confirmation,:for=>"sr-only" %>
+    <%= form.password_field :password_confirmation,
+    :class=>"form-control field_with_errors",
+    :require=>true,
+    :style=>"margin-bottom:3%;",
+    :placeholder=>"password confirmation ..."
+    %>
+
+    <%= form.submit "Validate !",
+    :class=>"btn btn-lg btn-primary btn-block",
+    :style=>"margin-bottom:3%;",
+    %>
+    <% end %>
+  </fieldset>
+</div>

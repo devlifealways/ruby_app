@@ -6,6 +6,8 @@ Static::Application.routes.draw do
 
   match '/new', :to => 'users#new'
 
+  match '/edit', :to => 'users#edit'
+
   match '/sessions', :to => 'sessions#create'
 
   match '/signin',:to => 'sessions#new'

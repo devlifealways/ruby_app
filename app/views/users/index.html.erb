@@ -1,0 +1,53 @@
+<% content_for :head do %>
+<%= stylesheet_link_tag 'css/index'%>
+<% end %>
+<div class="pretty-form" style="width:60%;">
+  <% if !flash.nil? and flash.has_key?(:success)  %>
+  <% flash.each do |key,value| %>
+  <div class="alert alert-<%= key %> alert-dismissible space" id="remove-me" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <%= value %>
+  </div>
+  <% end %>
+  <% end %>
+  <%= will_paginate %>
+  <table class="table" style="background-color : transparent;color:white;">
+    <thead>
+      <tr>
+        <th>Picture</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td>
+          <!-- <%= image_tag "me.png",:width=>"70",
+          :height=>"70",
+          :class=>"img-circle space",
+          :alt=>"#{user.name}" %> -->
+          <%= gravatar_for user%>
+        </td>
+        <td class="col-centered">
+          <%= link_to user.name,user,:style=>"color:white;font-weight:bold;" %>
+        </td>
+        <% if current_user.admin? %>
+        <td class="col-centred">
+          | <%= link_to user,:style=>"color:white;text-decoration:none;font-weight:bold;",
+          :method => :delete,
+          :confirm => "Are you sure ?",
+          :title => "Deleting #{user.name}" do |link| %>
+          Delete <span class="glyphicon glyphicon-remove"></span>
+          <% end %>
+        </td>
+        <% end %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= will_paginate %>
+  <div>
+  </div>
+</div>

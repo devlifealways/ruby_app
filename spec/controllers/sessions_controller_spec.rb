@@ -10,7 +10,6 @@ describe SessionsController do
     end
   end
 
-
   describe "POST 'create'" do
 
     before (:all) do

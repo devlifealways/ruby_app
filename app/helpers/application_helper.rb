@@ -7,6 +7,19 @@ module ApplicationHelper
       "#{default} - [#{@title.capitalize}]"
     end
   end
+
+  def gravatar_for user,options = {:size=>40}
+    if options[:class].blank?
+      cclass = "img-circle"
+    else
+      cclass = options[:class]
+    end
+    gravatar_image_tag user.email.downcase,
+    :class=>cclass,
+    :alt=>user.name.capitalize,
+    :gravatar=>options
+  end
+
   # just a simple function used inside the footer of each page
   def creator
     "Made by ROUINEB Hamza. 2016"

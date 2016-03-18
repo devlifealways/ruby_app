@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20160307154801
+# Schema version: 20160316233053
 #
 # Table name: users
 #
@@ -10,12 +10,13 @@
 #  updated_at         :datetime
 #  encrypted_password :string(255)
 #  salt               :string(255)
+#  img                :string(255)
 #
 
 require 'digest'
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name,:email,:password,:password_confirmation
+  attr_accessible :name,:email,:password,:password_confirmation,:img
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :name, :presence=>true,:length=>{:maximum=>50}
