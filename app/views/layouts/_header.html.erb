@@ -14,7 +14,15 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href=" <%= root_path %>" style="font-weight:bold">Home <span class="sr-only">(current)</span></a></li>
+        <li class="active">
+          <a href=" <%= root_path %>" style="font-weight:bold">
+            Home
+            <% if signed_in? %>
+            <span class="badge"><%= current_user.microposts.count %></span>
+            <% end %>
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
         <li><%= link_to "Contact",contact_path,:style=>"font-weight:bold" %></li>
         <li><%= link_to "About",propos_path,:style=>"font-weight:bold" %></li>
       </ul>
@@ -35,8 +43,14 @@
         <% else %>
         <li>
           <%= link_to edit_user_path(current_user),:style=>"font-weight:bold" do %>
+          Settings
+          <span class="glyphicon glyphicon-cog"></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to user_path(current_user),:style=>"font-weight:bold" do %>
           Profile
-          <span class="glyphicon glyphicon-home"></span>
+          <span class="glyphicon glyphicon-user"></span>
           <% end %>
         </li>
         <li>

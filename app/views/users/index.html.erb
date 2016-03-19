@@ -28,7 +28,7 @@
           :height=>"70",
           :class=>"img-circle space",
           :alt=>"#{user.name}" %> -->
-          <%= gravatar_for user%>
+          <%= gravatar_for user,:style=>"margin-top:2%;",:size=>40 %>
         </td>
         <td class="col-centered">
           <%= link_to user.name,user,:style=>"color:white;font-weight:bold;" %>

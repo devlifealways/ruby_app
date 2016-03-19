@@ -11,11 +11,11 @@
   <% end %>
   <div class="row text-center clearfix">
 
-    <%= image_tag "me.png",:width=>"70",
+    <!-- <%= image_tag "me.png",:width=>"70",
     :height=>"70",
     :class=>"img-circle space",
-    :alt=>"#{@user.name}" %>
-
+    :alt=>"#{@user.name}" %> -->
+    <%= gravatar_for current_user,:style=>"margin-top:2%;",:size=>40 %>
     <h3 class=""><b style="color:white"><%= @user.name.capitalize %></b></h3>
   </div>
   <hr>
@@ -40,6 +40,38 @@
     </label>
   </div>
 </div>
+<div class="container pretty-form" >
+  <div class="page-header">
+    <h1 style="color:white;"><%= @user.name.capitalize %> <small>wrote  <%= pluralize(@microposts.count,"microposts") %> </small></h1>
+  </div>
+  <%= will_paginate :style=>"font-weight:bold;" %>
+  <% counter = 0 %>
+  <% @microposts.each do |micropost| %>
+  <!-- starts here -->
+  <div class="panel-group" style="" id="accordion" role="tablist" aria-multiselectable="true" aria-expanded="false">
+    <div class="panel panel-warning">
+      <div class="panel-heading" role="tab" id="headingOne<%= counter %>">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne<%= counter %>" aria-expanded="false" aria-controls="collapseOne<%= counter %>">
+            Posted <%= time_ago_in_words micropost.created_at %> ago
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne<%= counter %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne<%= counter %>">
+        <div class="panel-body">
+          <%= micropost.content %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% counter+=1 %>
+  <!-- ends here -->
+  <% end %>
+  <%= will_paginate :style=>"font-weight:bold;" %>
+
+</div>
+
+
 <% content_for :script do %>
 <%=  javascript_include_tag 'commun'%>
 <% end %>

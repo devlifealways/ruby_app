@@ -17,7 +17,8 @@ module ApplicationHelper
     gravatar_image_tag user.email.downcase,
     :class=>cclass,
     :alt=>user.name.capitalize,
-    :gravatar=>options
+    :gravatar=>options,
+    :style => options[:style] unless options[:style].blank?
   end
 
   # just a simple function used inside the footer of each page

@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   attr_accessor :title
   def home
-    @title = "Sticky Footer Navbar Template for Bootstrap"
+    @title = "Welcome home"
   end
 
   def contact
@@ -18,6 +18,10 @@ class PagesController < ApplicationController
 
   def index
     @title = "welcome"
+    if signed_in?
+      @micropost = Micropost.new
+      @feed_items = current_user.feed.paginate(:page => params[:page])
+    end
   end
 
 end

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @users = User.paginate(:page => params[:page])
     # each user should not see him self among the users, it's a little bit akward
     # and he could delete himeself accidentaly .. happend to me !
-    @users.delete_if{|i|i==current_user}
+    @users.delete_if{|i|i==current_user} unless @users.empty?
   end
 
   def new
@@ -19,7 +19,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(:page => params[:page])
     @title = @user.name
+    @users = @user.microposts.paginate(:page => params[:page])
   end
 
   def create
@@ -58,9 +60,6 @@ class UsersController < ApplicationController
 
 
   private
-  def authenticate
-    deny_access unless signed_in?
-  end
 
   def correct_user
     @user = User.find(params[:id])

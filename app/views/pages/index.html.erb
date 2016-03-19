@@ -1,41 +1,78 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'css/commun'%>
-  <% end %>
-  <div class="jumbotron space">
-    <h1> Welcome to the users friendly website </h1>
-    <p class="lead">
-      This website was made using ruby on rails framework, which is fascinating indeed !
-    </p>
-    <p>
-      <div class="text-center">
-        <!-- <a class="btn btn-lg btn-success" href="" role="button">Join us today <span class="glyphicon glyphicon-thumbs-up"></span></a> -->
-        <%= link_to new_path,:class=>"btn btn-lg btn-success",:role=>"button"  do %>
-          <b>Join us today&nbsp;</b><span class="glyphicon glyphicon-thumbs-up"></span>
-        <%end%>
+<%= stylesheet_link_tag 'css/commun'%>
+<% end %>
+
+<% if !signed_in? %>
+<div class="jumbotron space">
+  <h1> Welcome to the users friendly website </h1>
+  <p class="lead">
+    This website was made using ruby on rails framework, which is fascinating indeed !
+  </p>
+  <p>
+    <div class="text-center">
+      <!-- <a class="btn btn-lg btn-success" href="" role="button">Join us today <span class="glyphicon glyphicon-thumbs-up"></span></a> -->
+      <%= link_to new_path,:class=>"btn btn-lg btn-success",:role=>"button"  do %>
+      <b>Join us today&nbsp;</b><span class="glyphicon glyphicon-thumbs-up"></span>
+      <%end%>
+    </div>
+  </p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-6">
+    <h4>Subheading</h4>
+    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+    <h4>Subheading</h4>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+    <h4>Subheading</h4>
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  </div>
+
+  <div class="col-lg-6">
+    <h4>Subheading</h4>
+    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+    <h4>Subheading</h4>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+    <h4>Subheading</h4>
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  </div>
+</div>
+<%else%>
+<div class="container space" style="width:100%;">
+  <div class="col-md-9" style="padding:2%;border-radius: 15px;background-color:rgba(255,255,120,0.3);">
+    <%= render 'shared/error_microposts' %>
+    <div class="page-header" >
+      <h1 style="color:white;">What's happening?<small> tell us ... </small></h1>
+    </div>
+    <%= form_for @micropost do |f| %>
+    <div class="form-group">
+      <div class="field">
+        <%= f.text_area :content,:class=>"form-control",:style=>"height:200px;" %>
       </div>
-    </p>
-  </div>
-
-  <div class="row marketing">
-    <div class="col-lg-6">
-      <h4>Subheading</h4>
-      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-      <h4>Subheading</h4>
-      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-      <h4>Subheading</h4>
-      <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      <div class="actions">
+        <%= f.submit "Submit",:class=>"btn btn-success center-block",:style=>"margin-bottom:2%;margin-top:2%;" %>
+      </div>
     </div>
-
-    <div class="col-lg-6">
-      <h4>Subheading</h4>
-      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-      <h4>Subheading</h4>
-      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-      <h4>Subheading</h4>
-      <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+    <% end %>
+    <%= render 'shared/feed' %>
+  </div>
+  <div class="col-md-3" style="border-radius: 15px;;background-color:rgba(255,255,120,0.3);border-color:white;color:white;font-weight:bold;">
+    <div class="row text-center clearfix" style="padding:2%;">
+      <%= gravatar_for current_user,:style=>"margin-top:2%;",:size=>40 %>
+    </div>
+    <div class="row text-center clearfix" style="padding:2%;">
+      <%= current_user.name.capitalize %>
+    </div>
+    <div class="row text-center clearfix" style="padding:2%;">
+      <%= pluralize current_user.microposts.count, "micropost" %>
     </div>
   </div>
+
+</div>
+
+
+<%end%>

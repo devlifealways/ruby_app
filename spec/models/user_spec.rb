@@ -1,7 +1,5 @@
 require 'spec_helper'
 
-
-
 describe User do
   before (:all) do
     @attr =
@@ -91,7 +89,7 @@ describe User do
       it "should not have the same password" do
         @user.has_password?("invalid").should be_false
       end
-    end
+    end #has_password method
 
     describe "Testing the authenticate method" do
 
@@ -110,8 +108,51 @@ describe User do
         good_guy.should == @user
       end
 
+    end #Testing the authenticate method
+
+  end #Password encryption :
+
+  describe "microposts associations" do
+
+    before(:each) do
+      @user = User.create(@attr)
+      @mp1 = Factory(:micropost, :user => @user, :created_at => 1.day.ago)
+      @mp2 = Factory(:micropost, :user => @user, :created_at => 1.hour.ago)
     end
 
-  end
+    it "should have an attribute `microposts`" do
+      @user.should respond_to(:microposts)
+    end
+
+    it "should have the right micro-messags well ordered" do
+      @user.microposts.should == [@mp2, @mp1]
+    end
+
+    it "should destroy all the micro-messages associated with the user" do
+      @user.destroy
+      [@mp1, @mp2].each do |micropost|
+        Micropost.find_by_id(micropost.id).should be_nil
+      end
+    end
+
+    it "should have a function called `feed`" do
+      @user.should respond_to(:feed)
+    end
+
+    it "should have the microposts of the user" do
+      @user.feed.include?(@mp1).should be_true
+      @user.feed.include?(@mp2).should be_true
+    end
+
+    it "only the microposts of the given user" do
+      mp3 = Factory(:micropost,
+      :user => Factory(:user, :email => Factory.next(:email)))
+      @user.feed.include?(mp3).should be_false
+    end
+
+
+  end #microposts associations
+
+
 
 end
