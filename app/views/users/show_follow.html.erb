@@ -1,0 +1,35 @@
+<div class="container">
+  <h1 style="color:white;">
+    <%=
+    @title
+    %>
+  </h1>
+  <div class="col-md-5 pretty-form">
+    <% unless @users.empty? %>
+    <%= will_paginate @users %>
+    <%= render @users %>
+    <%= will_paginate @users %>
+    <% end %>
+  </div>
+  <div class="col-md-6 pretty-form">
+    <div class="row text-center" style="color:white;font-weight:bold;">
+      <%= @user.name %>
+    </div>
+    <div class="row text-center" style="color:white;font-weight:bold;">
+      <%= link_to user_path(@user), @user,:style=>"color:white;" %>
+    </div>
+    <div class="row text-center" style="color:white;font-weight:bold;">
+      <%= @user.microposts.count %> Microposts
+    </div>
+    <%= render 'shared/stats' %>
+    <% unless @users.empty? %>
+    <h3 style="color:white;">
+      <%= @title %> images
+    </h3>
+    <% @users.each do |user| %>
+      <%= link_to gravatar_for(user, :size => 30,:style=>"margin-top:2%;",:size=>40), user %>
+    <% end %>
+    <% end %>
+  </div>
+
+</div>

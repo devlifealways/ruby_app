@@ -1,0 +1,38 @@
+<div class="container space pretty-form" >
+  <div class="row text-center clearfix">
+    <%= image_tag "me.png",:width=>"70",
+    :height=>"70",
+    :class=>"img-circle space",
+    :alt=>"#{@user.name}" %>
+    <h3 class=""><b style="color:white"><%= @user.name.capitalize %></b></h3>
+  </div>
+  <hr>
+  <div class="col-md-4 clearfix" style="color:white">
+    <%= label "name","Name : " %>
+  </div>
+  <div class="col-md-4 col-md-offset-2 clearfix" style="color:white">
+    <%= label "name-value","#{@user.name.capitalize} " %>
+  </div>
+  <div class="col-md-4 clearfix" style="color:white">
+    <%= label "email","Email : " %>
+  </div>
+  <div class="col-md-4 col-md-offset-2 clearfix" style="color:white">
+    <%= label "email-value","#{@user.email.downcase} " %>
+  </div>
+  <div class="col-md-4 clearfix" style="color:white">
+    <%= label "URL","Level : " %>
+  </div>
+  <div class="col-md-4 col-md-offset-2 clearfix" style="color:white">
+    <label>
+      Master 1
+    </label>
+  </div>
+  <div class="col-md-4 clearfix" style="color:white">
+    <%= label "URL","GitHub : " %>
+  </div>
+  <div class="col-md-4 col-md-offset-2 clearfix" style="color:white">
+    <a style="color:white;font-weight:bold;" href="https://github.com/devlifealways/hope">
+      git@github.com:devlifealways/hope.git
+    </a>
+  </div>
+</div>

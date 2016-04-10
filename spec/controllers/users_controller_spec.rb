@@ -3,7 +3,7 @@ require 'spec_helper'
 describe UsersController do
   render_views
 
-  before(:all) do
+  before(:each) do
     @txt = {:first => "the", :second => "page"}
   end
 
@@ -285,6 +285,44 @@ describe UsersController do
 
     end #no
 
+    describe "followers pages" do
+
+      describe "When not logged in" do
+
+        it "should protect the following" do
+          get :following, :id => 1
+          response.should redirect_to(signin_path)
+        end
+
+        it "should protect the followers" do
+          get :followers, :id => 1
+          response.should redirect_to(signin_path)
+        end
+      end
+
+      describe "when logged in" do
+
+        before(:each) do
+          @user = test_sign_in(Factory(:user))
+          @other_user = Factory(:user, :email => Factory.next(:email))
+          @user.follow!(@other_user)
+        end
+
+        it "should return the followings" do
+          get :following, :id => @user
+          response.should have_selector("a", :href => user_path(@other_user),
+          :content => @other_user.nom)
+        end
+
+        it "should return the followers" do
+          get :followers, :id => @other_user
+          response.should have_selector("a", :href => user_path(@user),
+          :content => @user.nom)
+        end
+      end
+    end
 
 
-  end
+
+
+    end

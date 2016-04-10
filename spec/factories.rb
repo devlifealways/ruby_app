@@ -6,7 +6,7 @@ Factory.define :user do |user|
 end
 
 Factory.sequence :email do |n|
-  "phoenix-#{n}@example.com"
+  "phoenix-#{n}@gmail.com"
 end
 
 Factory.define :micropost do |micropost|

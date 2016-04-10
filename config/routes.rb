@@ -6,7 +6,7 @@ Static::Application.routes.draw do
   resources :users
   resources :sessions,:only =>[:new,:create,:destroy]
   resources :microposts, :only => [:create, :destroy]
-
+  resources :relationships, :only => [:create, :destroy]
 
   root :to => "pages#index"
 
@@ -25,6 +25,20 @@ Static::Application.routes.draw do
   get "/propos", :to => 'pages#propos'
 
   get "/help", :to => 'pages#help'
+
+
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
+  resources :users do
+    collection do
+      get :tigers
+    end
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

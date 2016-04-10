@@ -1,0 +1,17 @@
+<% @user ||= current_user %>
+<div class="row text-center clearfix" style="padding:2%;">
+  <div class="col-md-6">
+    <a href="<%= following_user_path(@user) %>" style="color:white;">
+      <span id="following" class="stat">
+        <%= pluralize(@user.following.count, "Followings", "Following") %>
+      </span>
+    </a>
+  </div>
+  <div class="col-md-6">
+    <a href="<%= followers_user_path(@user) %>" style="color:white;">
+      <span id="followers" class="stat">
+        <%= pluralize(@user.followers.count, "Follower") %>
+      </span>
+    </a>
+  </div>
+</div>

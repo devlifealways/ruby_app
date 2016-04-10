@@ -28,7 +28,7 @@ describe Micropost do
   end
 
 
-  describe "micro-message associations" do
+  describe "Micro-message associations" do
 
     before(:each) do
       @user = User.create(@attr)
@@ -37,10 +37,11 @@ describe Micropost do
     it "Should have a 'microposts' attribute" do
       @user.should respond_to(:microposts)
     end
-  end
+
+  end # Micro-message associations
 
 
-  describe "validation" do
+  describe "Validation" do
 
     it "should have a user id" do
       Micropost.new(@attr).should_not be_valid
@@ -53,9 +54,9 @@ describe Micropost do
     it "the content cannot be too long !" do
       @user.microposts.build(:content => "a" * 141).should_not be_valid
     end
-  end
+  end # describe Validation
 
-  describe "access control" do
+  describe "Access control" do
 
     it "should refuse the action 'create'" do
       post :create
@@ -66,7 +67,42 @@ describe Micropost do
       delete :destroy, :id => 1
       response.should redirect_to(signin_path)
     end
-  end
+  end # Access control
+
+  describe "from_users_followed_by" do
+
+    before(:each) do
+      @other_user = Factory(:user, :email => Factory.next(:email))
+      @third_user = Factory(:user, :email => Factory.next(:email))
+
+      @user_post  = @user.microposts.create!(:content => "foo")
+      @other_post = @other_user.microposts.create!(:content => "bar")
+      @third_post = @third_user.microposts.create!(:content => "baz")
+
+      @user.follow!(@other_user)
+    end
+
+    it "Should have a class method from_users_followed_by" do
+      Micropost.should respond_to(:from_users_followed_by)
+    end
+
+    it "Should contain the following microposts" do
+      Micropost.from_users_followed_by(@user).should include(@other_post)
+    end
+
+    it "Should contain his microposts" do
+      Micropost.from_users_followed_by(@user).should include(@user_post)
+    end
+
+    it "Should not include others microposts" do
+      Micropost.from_users_followed_by(@user).should_not include(@third_post)
+    end
+  end #from_users_followed_by
+
+
+
+
+
 
 
 

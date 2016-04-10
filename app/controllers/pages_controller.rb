@@ -10,6 +10,9 @@ class PagesController < ApplicationController
 
   def propos
     @title = "propos"
+    @user = User.new
+    @user.name = "ROUINEB Hamza"
+    @user.email = "rouineb.business@gmail.com"
   end
 
   def help

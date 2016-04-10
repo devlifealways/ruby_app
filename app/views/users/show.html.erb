@@ -17,6 +17,7 @@
     :alt=>"#{@user.name}" %> -->
     <%= gravatar_for current_user,:style=>"margin-top:2%;",:size=>40 %>
     <h3 class=""><b style="color:white"><%= @user.name.capitalize %></b></h3>
+    <%= render 'follow_form' if signed_in? %>
   </div>
   <hr>
   <div class="col-md-4 clearfix" style="color:white">
@@ -39,6 +40,32 @@
       <%= link_to "#{user_path(@user)}","#{user_path(@user)}",:style=>"color:white" %>
     </label>
   </div>
+  <div class="col-md-4 clearfix" style="color:white">
+    <%= label "Following","Following : " %>
+  </div>
+  <div class="col-md-4 col-md-offset-2 clearfix" style="color:white">
+    <label>
+      <a href="<%= following_user_path(@user) %>" style="color:white;">
+        <span id="following" class="stat">
+          <%= pluralize(@user.following.count, "Following", "Followings") %>
+        </span>
+      </a>
+    </label>
+  </div>
+  <div class="col-md-4 clearfix" style="color:white">
+    <%= label "Followers","Followers : " %>
+  </div>
+  <div class="col-md-4 col-md-offset-2 clearfix" style="color:white">
+    <label>
+      <a href="<%= followers_user_path(@user) %>" style="color:white;">
+        <span id="followers" class="stat">
+          <%= pluralize(@user.followers.count, "Follower") %>
+        </span>
+      </a>
+    </label>
+  </div>
+
+</div>
 </div>
 <div class="container pretty-form" >
   <div class="page-header">

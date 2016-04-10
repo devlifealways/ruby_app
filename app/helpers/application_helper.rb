@@ -8,6 +8,7 @@ module ApplicationHelper
     end
   end
 
+  # this is a tweaked version of gravatr to work with boostrap framework more easily
   def gravatar_for user,options = {:size=>40}
     if options[:class].blank?
       cclass = "img-circle"
@@ -25,4 +26,5 @@ module ApplicationHelper
   def creator
     "Made by ROUINEB Hamza. 2016"
   end
+
 end
