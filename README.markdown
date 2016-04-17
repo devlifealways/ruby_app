@@ -1,3 +1,3 @@
 __AUTHOR__ : Phoenix
 __SUBJECT__ :
-  This is the third simple I managed to make on the same day !
+  ruby app all the 12th chapters plus the additions told.
